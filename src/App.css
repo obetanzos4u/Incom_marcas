@@ -41,7 +41,9 @@
   color: #888;
 }
 
------------------------------ .main_container-info_marcas {
+/* ------------ Sección Marcas Propias -------------  */
+
+.main_container-info_marcas {
   width: 90%;
   margin: auto;
 }
@@ -105,7 +107,12 @@
   bottom: 0;
 }
 
-.element2-info_marcas {
+.image-wrapper-container-info_marcas.hovered .description-marcas {
+  transform: translateY(-100%);
+  transition: transform 400ms linear;
+}
+
+/* .element2-info_marcas {
   text-align: left;
   height: 60px;
   margin-left: 20px;
@@ -117,7 +124,7 @@
   left: 0;
   right: 0;
   top: 70%;
-}
+} */
 
 .element3-info_marcas {
   display: flex;
@@ -166,6 +173,48 @@
   transition-timing-function: linear;
   transition-delay: 0.1;
 }
+
+.efect-tl-info_marcas:hover ~ .description-marcas {
+  transform: translateY(-400%);
+  transition-property: transform;
+  transition-duration: 450ms;
+  transition-timing-function: linear;
+  transition-delay: 0.1;
+}
+
+.element3-info_marcas ~ .description-marcas {
+  transform: translateY(-100%);
+  transition-property: transform;
+  transition-duration: 450ms;
+  transition-timing-function: linear;
+  transition-delay: 0.1;
+}
+/* Add more styles as needed */
+
+/* Estilos para el elemento con clase "element3-info_marcas" */
+.element3-info_marcas {
+  cursor: pointer;
+  background-color: lightgray;
+  padding: 10px;
+  margin-bottom: 10px;
+  transition: transform 450ms linear 0.1s;
+}
+
+/* .element3-info_marcas:hover {
+  transform: translateY(-100%);
+} */
+
+/* Estilos para el elemento con clase "description-marcas" */
+.description-marcas {
+  background-color: lightblue;
+  padding: 5px;
+  margin-top: 5px;
+  transition: transform 450ms linear 0.1s;
+}
+
+/* .description-marcas:hover {
+  transform: translateY(-400%);
+} */
 
 ul.info_marcas {
   position: relative;
@@ -216,6 +265,10 @@ ul.info_marcas {
 .element3-info_marcas {
   pointer-events: auto;
   z-index: 1000;
+}
+
+.description-marcas {
+  margin-top: -140px;
 }
 
 @media only screen and (min-width: 1600px) {
@@ -409,3 +462,90 @@ ul.info_marcas {
     width: 29% !important;
   }
 }
+
+/* ------------------------------------------  */
+
+.main-container {
+  width: 400px;
+  height: 300px;
+  position: relative;
+}
+
+.div1 {
+  z-index: 100;
+  width: 400px;
+  height: 440px;
+  background-color: #5a5f7319;
+  position: absolute;
+}
+
+.div2 {
+  top: 0;
+  width: 400px;
+  height: auto;
+  background-color: blue;
+  transition: transform 1.8s ease-out;
+  align-self: flex-start;
+  transform-origin: top;
+  margin-bottom: 0 !important;
+}
+
+.div3 {
+  width: 400px;
+  height: 20px;
+  background-color: yellow;
+  transition: transform 0.4s ease;
+}
+
+.div4 {
+  z-index: 1000;
+  width: 400px;
+  height: 120px;
+  background-color: olive;
+  transition: transform 0.4s ease;
+  position: inherit;
+}
+
+ul {
+  margin: 0;
+}
+
+/* .div4:hover ~ .main-container .div2 {
+  transform: translateZ(0px) scale(0.5);
+} */
+
+.divhover:hover ~ .main-container > .div3 {
+  transform: translateY(-60px) translateZ(0px);
+}
+
+/* .divhover:hover ~ .main-container > .div4 {
+  transform: translateY(-60px) translateZ(0px);
+} */
+
+/* .div2 {
+  transition: transform 0.3s;
+}
+
+.div2.scaled {
+  transform: scale(0.6);
+}
+
+.div4 {
+  pointer-events: none;
+} */
+
+.div2 {
+  transition: transform 0.3s;
+}
+
+.div2.scaled {
+  transform: scale(0.6);
+}
+
+.div4 {
+  pointer-events: auto;
+}
+
+/* .no-pointer {
+  pointer-events: none;
+} */

@@ -19,12 +19,13 @@
   width: 400px;
   height: 300px;
   position: relative;
+  max-height: 180px;
 }
 
 .div1 {
   z-index: 100;
   width: 400px;
-  height: 440px;
+  height: 180px;
   background-color: #5a5f7319;
   position: absolute;
 }
@@ -32,7 +33,7 @@
 .div2 {
   width: 400px;
   height: auto;
-  background-color: blue;
+  /* background-color: blue; */
   transform-origin: top;
   margin-bottom: 0 !important;
 }
@@ -40,27 +41,57 @@
 .div3 {
   width: 400px;
   height: 20px;
-  background-color: yellow;
+  /* background-color: yellow; */
   transition: transform 0.4s ease;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .div4 {
   z-index: 1000;
   width: 400px;
   height: 120px;
-  background-color: olive;
+  /* background-color: olive; */
   transition: transform 0.4s ease;
   position: inherit;
+  margin-top: 2.4rem;
+}
+
+.img {
+  width: 380px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 ul {
   margin: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 .div2 {
-  transition: transform 0.3s;
+  transition: transform 0.4s;
 }
 
 .div2.scaled {
-  transform: scale(0.6);
+  transform: scale(0.5);
+}
+
+.div3.transformed {
+  transform: translateY(-3.8rem); /* Adjust the value as needed */
+}
+
+.div4.transformed {
+  transform: translateY(-5.4rem); /* Adjust the value as needed */
+}
+
+.mheight {
+  width: 400px;
+  height: 200px;
+  background-color: white;
+  z-index: 20000;
+  display: flex;
+  position: absolute;
 }

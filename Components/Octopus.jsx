@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import IcoPlastik from '../src/img/IcoPlastik_marca.png';
-
+import IcoPlastik from '../src/img/ICOPLASTIK.jpg';
 import '../src/App.css';
 
 const Octopus = () => {
@@ -14,10 +13,6 @@ const Octopus = () => {
     setIsDiv2Hovered(false);
   };
 
-  const handleDiv1MouseOver = () => {
-    setIsDiv2Hovered(true);
-  };
-
   const handleDiv4MouseOver = () => {
     setIsDiv2Hovered(true);
   };
@@ -26,9 +21,8 @@ const Octopus = () => {
     <div>
       <div
         className={`div1 ${isDiv2Hovered ? 'scaled' : ''}`}
-        onMouseOver={handleDiv1MouseOver} // Mantener el efecto de hover en div2 cuando se pasa el cursor sobre div1
-        onMouseOut={handleDiv2MouseOut} // Mantener el efecto de hover en div2 cuando se sale del cursor de div1
-      ></div>
+        onMouseOver={handleDiv2MouseOver}
+        onMouseOut={handleDiv2MouseOut}></div>
       <div className="main-container">
         <div
           className={`div2 ${isDiv2Hovered ? 'scaled' : ''}`}
@@ -41,30 +35,39 @@ const Octopus = () => {
             target="_blank"
           />
         </div>
-        <div className="div3">Descripción</div>
+        <div className={`div3 ${isDiv2Hovered ? 'transformed' : ''}`}>
+          Coples y tapones para ductos
+        </div>
         <div
-          className="div4"
-          onMouseOver={handleDiv4MouseOver} // Mantener el efecto de hover en div2 cuando se pasa el cursor sobre div4
-          onMouseOut={handleDiv2MouseOut} // Mantener el efecto de hover en div2 cuando se sale del cursor de div4
-        >
+          className={`div4 ${isDiv2Hovered ? 'transformed' : ''}`}
+          onMouseOver={handleDiv4MouseOver}
+          onMouseOut={handleDiv2MouseOut}>
           <ul>
             <li>
               <a
                 href="/productos/buscar?busqueda=top_polimerico"
                 target="_blank">
-                Registros prefabricados
+                Ductos
               </a>
             </li>
             <li>
               <a
                 href="/productos/buscar?busqueda=polymerico_acc"
                 target="_blank">
-                Accesorios para registros
+                Microductos
+              </a>
+            </li>
+            <li>
+              <a
+                href="/productos/buscar?busqueda=polymerico_acc"
+                target="_blank">
+                Coples y tapones
               </a>
             </li>
           </ul>
         </div>
       </div>
+      <div className="mheight"></div>
     </div>
   );
 };

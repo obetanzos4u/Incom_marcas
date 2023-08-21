@@ -26,7 +26,7 @@
   z-index: 100;
   width: 400px;
   height: 180px;
-  background-color: #5a5f7319;
+  /* background-color: #5a5f7319; */
   position: absolute;
 }
 
@@ -56,7 +56,7 @@
   /* background-color: olive; */
   transition: transform 0.4s ease;
   position: inherit;
-  margin-top: 2.4rem;
+  margin-top: 2.6rem;
 }
 
 .img {
@@ -66,9 +66,19 @@
 }
 
 ul {
-  margin: 0;
+  margin: auto;
   list-style-type: none;
   padding: 0;
+  border-top: 1px solid #2525253b;
+  width: 70%;
+}
+
+ul > li > a {
+  color: black;
+}
+
+ul > li > a:hover {
+  color: black;
 }
 
 .div2 {

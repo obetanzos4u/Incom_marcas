@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import IcoPlastik from '../src/img/IcoPlastik_marca.png';
 
 import '../src/App.css';
